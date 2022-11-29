@@ -1,3 +1,21 @@
+<#
+.SYNOPSIS
+    Gets a list of software from Tactical RMM
+.DESCRIPTION
+    The Get-SoftwareFromTRMM cmdlet gets a list of software sotred in the Tactical RMM database.
+    You can direct this cmdlet to get software from only specific clients with the -ClientFilter parameter
+.PARAMETER TRMMApiKey
+    API Key from Settings > Global Settings > API Keys
+.PARAMETER TRMMApiUrl
+    Base url for the Tactical RMM API
+.PARAMETER ClientFilter
+    Comma separated list of clients
+.EXAMPLE
+    C:\PS> Get-SoftwareFromTRMM -TRMMApiKey 'ABCDEF123456789' -TRMMApiUrl 'https://api.example.com' -ClientFilter 'ACME Inc','Contoso','Some Other Client Name'
+.NOTES
+    Author: Justin Bloomfield
+    Date:   November 29, 2022    
+#>
 function Get-SoftwareFromTRMM {
     param (
         [Parameter(Mandatory)]
@@ -7,7 +25,6 @@ function Get-SoftwareFromTRMM {
         [string]
         $TRMMApiUrl,
         [string[]]
-        #Comma Seperated List
         $ClientFilter
     )
 
