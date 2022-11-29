@@ -9,7 +9,7 @@
 .PARAMETER TRMMApiUrl
     Base url for the Tactical RMM API
 .PARAMETER ClientFilter
-    Comma separated list of clients
+    Comma separated list of clients.  Pipeline input supported.
 .EXAMPLE
     C:\PS> Get-SoftwareFromTRMM -TRMMApiKey 'ABCDEF123456789' -TRMMApiUrl 'https://api.example.com' -ClientFilter 'ACME Inc','Contoso','Some Other Client Name'
 .NOTES
@@ -24,6 +24,7 @@ function Get-SoftwareFromTRMM {
         [Parameter(Mandatory)]
         [string]
         $TRMMApiUrl,
+        [Parameter(ValuefromPipeline=$True)]
         [string[]]
         $ClientFilter
     )
