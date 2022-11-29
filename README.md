@@ -1,3 +1,3 @@
 ## Description
 
-Repository for Tactical RMM Scripts
+Repository for Tactical RMM Powershell Scripts
