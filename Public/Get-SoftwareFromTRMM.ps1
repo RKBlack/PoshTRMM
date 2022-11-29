@@ -24,7 +24,7 @@ function Get-SoftwareFromTRMM {
         [Parameter(Mandatory)]
         [string]
         $TRMMApiUrl,
-        [Parameter(ValuefromPipeline=$True)]
+        [Parameter(ValuefromPipeline = $True)]
         [string[]]
         $ClientFilter
     )
@@ -47,8 +47,15 @@ function Get-SoftwareFromTRMM {
         $softwareResult = (Invoke-RestMethod -Method 'Get' -Uri "$url/software/$($agent.agent_id)/" -Headers $headers -ContentType 'application/json') 
         foreach ($softwareName in $softwareResult.software) {
             $softObj = New-Object psobject -Property @{
-                Computer = $agent.hostname
-                Software = $softwareName.name
+                'Computer'     = [string]$agent.hostname
+                'Name'         = [string]$softwareName.name
+                'Publisher'    = [string]$softwareName.Publisher
+                'Installed On' = [datetime]$softwareName.install_date
+                'Size'         = $softwareName.Size
+                'Version'      = $softwareName.Version
+                'Source'       = $($softwareName.source).Replace('\\', '\')
+                'Location'     = $($softwareName.location).Replace('\\', '\')
+                'Uninstall'    = $($softwareName.uninstall).Replace('\\', '\')
             }
             $softwareList += $softObj
         }
