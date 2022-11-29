@@ -6,7 +6,7 @@ function Get-SoftwareFromTRMM {
         [Parameter(Mandatory)]
         [string]
         $TRMMApiUrl,
-        [string]
+        [string[]]
         #Comma Seperated List
         $ClientFilter
     )
