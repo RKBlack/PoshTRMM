@@ -14,8 +14,6 @@ function Get-SoftwareFromTRMM {
         'X-API-KEY' = $TRMMApiKey
     }
 
-    $ClientFilter = @('TLS Group Inc')
-
     $url = $TRMMApiUrl
     $agentsResult = (Invoke-RestMethod -Method 'Get' -Uri "$url/agents/" -Headers $headers -ContentType 'application/json') | Where-Object {
         if ($clientFilter) {
