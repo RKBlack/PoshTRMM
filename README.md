@@ -1,5 +1,8 @@
 ## Release Notes
 
+### Version 0.2.1
+Fix a bug with missing `Get-TrmmBaseURL` cmdlet
+
 ### Version 0.2.0
 Reworked the structure of the module to improve flexibility.  Cmdlets will now call the `Invoke-TrmmRequest` function instead of `Invoke-WebRequest`.  The API keys are now stored as a secure string and will only need to be entered at the start of the Powershell session. 
 
