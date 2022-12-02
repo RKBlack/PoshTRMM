@@ -20,12 +20,13 @@ Unofficial powershell module to allow access to the Tactical RMM API.  I am not 
 
 ## Cmdlets
 ```
-    Get-SoftwareFromTRMM
-	Get-TrmmApiKey
-	New-TrmmApiKey
-	Remove-TrmmApiKey
-	New-TrmmBaseURL
-	Invoke-TrmmRequest
+Get-SoftwareFromTRMM
+Get-TrmmApiKey
+Neww-TrmmApiKey
+Remove-TrmmApiKey
+New-TrmmBaseURL
+Invoke-TrmmRequest
+Get-TrmmBaseUrl
 ```
 
 ## Usage
