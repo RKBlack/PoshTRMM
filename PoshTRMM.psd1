@@ -75,7 +75,8 @@
 	'Remove-TrmmApiKey',
 	'New-TrmmBaseURL',
 	'Invoke-TrmmRequest',
-	'Get-TrmmBaseURL'
+	'Get-TrmmBaseURL',
+	'Get-WindowsUpdatesFromTRMM'
 
 					
 

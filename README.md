@@ -1,5 +1,8 @@
 ## Release Notes
 
+### Version 0.2.2
+Added `Get-WindowsUpdatesFromTRMM`
+
 ### Version 0.2.1
 Fix a bug with missing `Get-TrmmBaseURL` cmdlet
 
@@ -27,6 +30,7 @@ Remove-TrmmApiKey
 New-TrmmBaseURL
 Invoke-TrmmRequest
 Get-TrmmBaseUrl
+Get-WindowsUpdatesFromTRMM
 ```
 
 ## Usage
