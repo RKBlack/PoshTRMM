@@ -1,5 +1,8 @@
 ## Release Notes
 
+### Version 0.2.3
+Added `Get-TrmmAgents`
+
 ### Version 0.2.2
 Added `Get-WindowsUpdatesFromTRMM`
 
