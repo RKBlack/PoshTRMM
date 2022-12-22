@@ -22,7 +22,9 @@ function Get-TrmmAgents {
             else {
                 $filteredAgents = (Invoke-TrmmRequest -Method 'Get' -Resource '/agents/') | Where-Object { $_.hostname -eq $agentName }
             }
-            $agents += $filteredAgents
+            $filteredAgents | ForEach-Object {
+                $agents += Invoke-TrmmRequest -Method 'Get' -Resource "/agents/$($_.agent_id)/" 
+            }
         }
     }
     elseif ($Clients) {
@@ -33,7 +35,9 @@ function Get-TrmmAgents {
             else {
                 $filteredAgents = (Invoke-TrmmRequest -Method 'Get' -Resource '/agents/') | Where-Object { $_.client_name -eq $client }
             }
-            $agents += $filteredAgents
+            $filteredAgents | ForEach-Object {
+                $agents += Invoke-TrmmRequest -Method 'Get' -Resource "/agents/$($_.agent_id)/" 
+            }
         }
     }
     else {  
@@ -43,8 +47,9 @@ function Get-TrmmAgents {
         else {
             $filteredAgents = (Invoke-TrmmRequest -Method 'Get' -Resource '/agents/')
         }
-        $agents += $filteredAgents
+        $filteredAgents | ForEach-Object {
+            $agents += Invoke-TrmmRequest -Method 'Get' -Resource "/agents/$($_.agent_id)/" 
+        }
     }
-
     return $agents
 }
