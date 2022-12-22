@@ -76,7 +76,8 @@
 	'New-TrmmBaseURL',
 	'Invoke-TrmmRequest',
 	'Get-TrmmBaseURL',
-	'Get-WindowsUpdatesFromTRMM'
+	'Get-WindowsUpdatesFromTRMM',
+	'Get-TrmmAgents'
 
 					
 

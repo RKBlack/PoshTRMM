@@ -31,6 +31,7 @@ New-TrmmBaseURL
 Invoke-TrmmRequest
 Get-TrmmBaseUrl
 Get-WindowsUpdatesFromTRMM
+Get-TrmmAgents
 ```
 
 ## Usage
