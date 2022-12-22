@@ -1,6 +1,6 @@
 ## Release Notes
 
-### Version 0.2.3
+### Version 0.2.3.1
 Added `Get-TrmmAgents`
 
 ### Version 0.2.2
