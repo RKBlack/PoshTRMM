@@ -10,7 +10,7 @@
     C:\PS> Get-SoftwareFromTRMM -Clients 'ACME Inc','Contoso','Some Other Client Name'
 .NOTES
     Author: Justin Bloomfield
-    Date:   November 29, 2022    
+    Date:   November 29, 2022
 #>
 function Get-SoftwareFromTRMM {
     param (
